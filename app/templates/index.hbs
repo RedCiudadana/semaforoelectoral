@@ -1,1 +1,59 @@
-{{outlet}}
+{{!-- Slider --}}
+<img src="img/slider-se.png" alt="Semaforo electoral 2018" width="100%">
+{{!-- Main container --}}
+<div class="container-fluid">
+    {{!-- Se parte del semáforo electoral --}}
+    <div class="row bg-primary text-white">
+        <div class="col-sm-6 text-center text-sm-left">
+            <h4>¡Sé parte del semáforo electoral!</h4>
+            <p class="font-weight-light text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-sm-6 text-center">
+            <button class="btn btn-warning text-white my-5 px-4">¿Cómo denunciar?</button>
+        </div>
+    </div>
+    {{!-- Tab-pdd --}}
+    <div class="row bg-light tab-pdd">
+      <div class="col-md-4 py-2">
+        <button class="btn bg-white wrap-inherit">
+          <img src="img/iconos/i-previo.png" alt="Previo al fin de inscripción de candidatos" height="50px">
+          <p>Previo al fin de inscripción de candidatos</p>
+        </button>
+      </div>
+
+      <div class="col-md-4 py-2">
+        <button class="btn bg-white wrap-inherit">
+          <img src="img/iconos/i-durante.png" alt="Previo al fin de inscripción de candidatos" height="50px">
+          <p>Durante Convocatoria</p>
+        </button>
+      </div>
+
+      <div class="col-md-4 py-2">
+        <button class="btn bg-white wrap-inherit">
+          <img src="img/iconos/i-despues.png" alt="Previo al fin de inscripción de candidatos" height="50px">
+          <p>Despues Elecciones</p>
+        </button>
+      </div>
+    </div>
+    {{!-- Main info --}}
+    {{outlet}}
+    {{!-- Reportar --}}
+    <div class="row bg-light">
+      <div class="col-12 text-center">
+        <h3>¿Presenciaste alguna irregularidad?</h3>
+        <p>Cualquier ciudadano puede hacer una denuncia, si detectas algo ilegal denuncia en:</p>
+      </div>
+      <div class="col-12 text-center">
+        <button class="btn btn-lg bg-white text-secondary">
+          <img src="img/iconos/i-telefono.png" alt="Teléfono" height="30px" class="mx-2">
+          2378-3900
+        </button>
+        <button class="btn btn-lg bg-white text-secondary">
+          <img src="img/iconos/i-contacto-tse.png" alt="Teléfono" height="30px" class="mx-2">
+          tse.org.gt
+        </button>
+      </div>
+    </div>
+</div>

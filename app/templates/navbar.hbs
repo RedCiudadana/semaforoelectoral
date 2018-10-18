@@ -1,34 +1,42 @@
-{{#bs-navbar class="py-4" backgroundColor="light" type="light" position="sticky-top" fluid=false as |navbar|}}
+{{#bs-navbar
+  class="py-4"
+  backgroundColor="white"
+  type="light"
+  position="sticky-top"
+  fluid=false
+as |navbar|
+}}
   <div class="navbar-header">
     {{navbar.toggle}}
 
     {{#link-to "application" class="navbar-brand"}}
-        <img
-          src="logo-brand.png"
-          class="img-responsive"
-          title="{{nombreApp}}"
-          alt="Semaforo Electoral"
-          height="45">
+      <img
+        src="logo-brand.png"
+        class="img-responsive"
+        title={{nombreApp}}
+        alt="Semaforo Electoral"
+        height="45"
+      >
     {{/link-to}}
   </div>
 
   {{#navbar.content}}
     {{#navbar.nav justified=true type="pills" class="ml-auto" as |nav|}}
-        {{#nav.item active=false class="mx-4"}}
-          <a href="#">¿Cómo denunciar?</a>
-        {{/nav.item}}
-        {{#nav.item active=false class="mx-4"}}
-          <a href="#">Periodos</a>
-        {{/nav.item}}
-        {{#nav.item active=false class="mx-4"}}
-          {{link-to 'Metodología' 'application'}}
-        {{/nav.item}}
-        {{#nav.item active=false class="mx-4"}}
-          <a href="#"><img src="img/iconos/i-fb.png" alt="RedXGuate" height="30px"></a>
-        {{/nav.item}}
-        {{#nav.item active=false class="mx-4"}}
-          <a href="#"><img src="img/iconos/i-tw.png" alt="RedXGuate" height="30px"></a>
-        {{/nav.item}}
+      {{#nav.item active=false class="mx-4"}}
+        <a href="#">¿Cómo denunciar?</a>
+      {{/nav.item}}
+      {{#nav.item active=false class="mx-4"}}
+        <a href="#">Periodos</a>
+      {{/nav.item}}
+      {{#nav.item active=false class="mx-4"}}
+        {{link-to "Metodología" "application"}}
+      {{/nav.item}}
+      {{#nav.item active=false class="mx-4"}}
+        <a href="https://www.facebook.com/Redciudadanagt/"><img src="img/iconos/i-fb.png" alt="RedCiudadanaGt" height="30px"></a>
+      {{/nav.item}}
+      {{#nav.item active=false class="mx-4"}}
+        <a href="https://twitter.com/RedxGuate"><img src="img/iconos/i-tw.png" alt="RedXGuate" height="30px"></a>
+      {{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}
 {{/bs-navbar}}
