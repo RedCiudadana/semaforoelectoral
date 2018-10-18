@@ -1,0 +1,45 @@
+// Colores
+
+$primary: #27495b;
+$secondary: #00ac56; // Cambiar
+$warning: #ef4a50;
+$dark: #1e2b3d;
+
+$navbar-color: $dark;
+
+$footer-background-color: $primary;
+$footer-color: #ffffff;
+$border-radius: 15px;
+
+@import "ember-bootstrap/bootstrap";
+
+// FOOTER
+
+#footer {
+    background-color: $footer-background-color;
+    color: $footer-color;
+    padding-bottom: 40px;
+    line-height: 26px;
+}
+
+#footer img {
+    opacity: 1;
+}
+
+#footer .logo {
+    margin-right: 0px;
+}
+
+#footer a {
+    color: $footer-color;;
+}
+
+#footer i {
+    width: 14px;
+}
+
+// FONT AWESOME
+i {
+    margin-left: 5px;
+    margin-right: 5px;
+}
