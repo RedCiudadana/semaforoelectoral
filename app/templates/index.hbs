@@ -11,7 +11,7 @@
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         <div class="col-sm-6 text-center">
-            <button class="btn btn-warning text-white my-5 px-4">¿Cómo denunciar?</button>
+            <a href="/#report"><button class="btn btn-warning text-white my-5 px-4">¿Cómo denunciar?</button></a>
         </div>
     </div>
     {{!-- Tab-pdd --}}
@@ -46,7 +46,7 @@
     {{!-- Main info --}}
     {{outlet}}
     {{!-- Reportar --}}
-    <div class="row bg-light">
+    <div id="report" class="row bg-light">
       <div class="col-12 text-center">
         <h3>¿Presenciaste alguna irregularidad?</h3>
         <p>Cualquier ciudadano puede hacer una denuncia, si detectas algo ilegal denuncia en:</p>
@@ -60,6 +60,16 @@
           <img src="img/iconos/i-contacto-tse.png" alt="Teléfono" height="30px" class="mx-2">
           tse.org.gt
         </button>
+      </div>
+    </div>
+    <div class="row bg-white">
+      <div class="col-12 d-flex text-center">
+        <a href="https://ciudadanointeligente.org/" target="_blank" class="my-auto mr-2 ml-md-auto">
+          <img src="img/logo-ciudadano-inteligente.png" alt="Ciudadano Inteligente" width="150px">
+        </a>
+        <a href="http://www.tse.org.gt/" target="_blank" class="my-auto ml-2 mr-md-auto">
+          <img src="img/logo-tse.png" alt="Tribunal Supremo Electoral" width="100px" class="my-auto">
+        </a>
       </div>
     </div>
 </div>
