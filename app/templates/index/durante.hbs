@@ -1,6 +1,6 @@
 <div class="row bg-white">
     <div class="col-12 d-block d-md-flex py-2 border border-top-0 border-left-0 border-right-0 text-center text-md-left">
-        <img src="img/iconos/i-previo.png" alt="Elecciones" height="100px">
+        <img src="img/iconos/i-durante.png" alt="Elecciones" height="100px">
         <div class="my-auto py-auto">
             <h4 class="ml-4">Durante Convocatoria</h4>
             <h5 class="ml-4 text-secondary font-weight-normal">Del 2 de mayo al -</h5>
@@ -8,3 +8,12 @@
     </div>
 </div>
 {{display-rules rules=model}}
+{{!-- Marca el boton a color verde --}}
+<script>
+    // Limpia los botones
+    $('.tab-pdd .btn ').removeClass('bg-secondary btn-secondary');
+    $('.tab-pdd .btn ').addClass('bg-white');
+    // Marca el boton
+    $('.tab-pdd .btn.durante').removeClass('bg-white');
+    $('.tab-pdd .btn.durante').addClass('bg-secondary btn-secondary');
+</script>

@@ -8,3 +8,12 @@
     </div>
 </div>
 {{display-rules rules=model}}
+{{!-- Marca el boton a color verde --}}
+<script>
+    // Limpia los botones
+    $('.tab-pdd .btn ').removeClass('bg-secondary btn-secondary');
+    $('.tab-pdd .btn ').addClass('bg-white');
+    // Marca el boton
+    $('.tab-pdd .btn.previo').removeClass('bg-white');
+    $('.tab-pdd .btn.previo').addClass('bg-secondary btn-secondary');
+</script>
