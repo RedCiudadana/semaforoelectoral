@@ -1,0 +1,23 @@
+{{!-- Información --}}
+<div class="row bg-white">
+    {{#each rules as |stage|}}
+        <div class="col-12 col-md-3 py-4">
+            <h4>{{stage.tag}}</h4>
+        </div>
+        <div class="col-12 col-md-9 py-4">
+                {{#each stage.data as |item|}}
+                    <div class="row">
+                        <div class="col-12 col-md-4 text-center">
+                            <img src="img/iconos/SEMAFORO-{{sum item.id 10}}.png" alt="{{item.actividad}}" class="w-75">
+                        </div>
+                        <div class="col-12 col-md-8">
+                            {{!-- Determina de que color es el texto --}}
+                              <h6 class="{{get-color-stage stage.tag}}">{{item.estado}}</h6>
+                            <p>{{item.actividad}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+        </div>
+        <div class="col-12 border border-top-0 border-left-0 border-right-0"></div>
+    {{/each}}
+</div>

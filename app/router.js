@@ -8,6 +8,12 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('metodologia');
+
+  this.route('index', { path: '/'}, function() {
+    this.route('previo', { path: '/'});
+    this.route('durante');
+    this.route('despues');
+  });
 });
 
 export default Router;

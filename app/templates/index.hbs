@@ -17,24 +17,30 @@
     {{!-- Tab-pdd --}}
     <div class="row bg-light tab-pdd">
       <div class="col-md-4 py-2">
-        <button class="btn bg-white wrap-inherit">
-          <img src="img/iconos/i-previo.png" alt="Previo al fin de inscripción de candidatos" height="50px">
-          <p>Previo al fin de inscripción de candidatos</p>
-        </button>
+        {{#link-to 'index'}}
+          <button class="btn bg-white wrap-inherit">
+            <img src="img/iconos/i-previo.png" alt="Previo al fin de inscripción de candidatos" height="50px">
+            <p>Previo al fin de inscripción de candidatos</p>
+          </button>
+        {{/link-to}}
       </div>
 
       <div class="col-md-4 py-2">
-        <button class="btn bg-white wrap-inherit">
-          <img src="img/iconos/i-durante.png" alt="Previo al fin de inscripción de candidatos" height="50px">
-          <p>Durante Convocatoria</p>
-        </button>
+        {{#link-to 'index.durante'}}
+          <button class="btn bg-white wrap-inherit">
+            <img src="img/iconos/i-durante.png" alt="Previo al fin de inscripción de candidatos" height="50px">
+            <p>Durante Convocatoria</p>
+          </button>
+        {{/link-to}}
       </div>
 
       <div class="col-md-4 py-2">
-        <button class="btn bg-white wrap-inherit">
-          <img src="img/iconos/i-despues.png" alt="Previo al fin de inscripción de candidatos" height="50px">
-          <p>Despues Elecciones</p>
-        </button>
+        {{#link-to 'index.despues'}}
+          <button class="btn bg-white wrap-inherit">
+            <img src="img/iconos/i-despues.png" alt="Previo al fin de inscripción de candidatos" height="50px">
+            <p>Despues Elecciones</p>
+          </button>
+        {{/link-to}}
       </div>
     </div>
     {{!-- Main info --}}
