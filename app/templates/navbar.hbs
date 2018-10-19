@@ -23,7 +23,7 @@ as |navbar|
   {{#navbar.content}}
     {{#navbar.nav justified=true type="pills" class="ml-auto" as |nav|}}
       {{#nav.item active=false class="mx-4"}}
-        <a href="#">¿Cómo denunciar?</a>
+        <a href="#report">¿Cómo denunciar?</a>
       {{/nav.item}}
       {{#nav.item active=false class="mx-4"}}
         <a href="#">Periodos</a>
@@ -32,10 +32,14 @@ as |navbar|
         {{link-to "Metodología" "application"}}
       {{/nav.item}}
       {{#nav.item active=false class="mx-4"}}
-        <a href="https://www.facebook.com/Redciudadanagt/"><img src="img/iconos/i-fb.png" alt="RedCiudadanaGt" height="30px" width="30px"></a>
+        <a href="https://www.facebook.com/Redciudadanagt/" target="_blank">
+          <img src="img/iconos/i-fb.png" alt="RedCiudadanaGt" height="30px" width="30px">
+        </a>
       {{/nav.item}}
       {{#nav.item active=false class="mx-4"}}
-        <a href="https://twitter.com/RedxGuate"><img src="img/iconos/i-tw.png" alt="RedXGuate" height="30px" width="30px"></a>
+        <a href="https://twitter.com/RedxGuate" target="_blank">
+          <img src="img/iconos/i-tw.png" alt="RedXGuate" height="30px" width="30px">
+        </a>
       {{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}
