@@ -14,18 +14,30 @@ $border-radius: 25px;
 
 @import "ember-bootstrap/bootstrap";
 
-.row {
+.row, #slider {
     padding: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-// Example usage:
+// Mayor margen en pantallas grandes
 @include media-breakpoint-up(sm) {
-    .row {
+    .row, #slider {
         padding: 2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+#slider {
+    width: 100vw;
+    height: 160vw;
+}
+
+@include media-breakpoint-up(sm) {
+    #slider {
+        width: 100vw;
+        height: 60vw;
     }
 }
 
