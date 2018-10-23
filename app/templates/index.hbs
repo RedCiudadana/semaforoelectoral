@@ -82,50 +82,55 @@
         </a>
       </div>
     </div>
+
+    {{!-- Ciudadano Inteligente & TSE --}}
     <div class="row bg-white">
       <div class="col-12 d-block d-md-flex text-center">
         <a href="https://ciudadanointeligente.org/" target="_blank" class="my-auto mx-auto mx-md-0 mr-md-4 ml-md-auto">
           <img src="img/logo-ciudadano-inteligente.png" alt="Ciudadano Inteligente" width="200px">
         </a>
         <a href="http://www.tse.org.gt/" target="_blank" class="my-auto mx-auto mx-md-0 ml-md-4 mr-md-auto">
-          <img src="img/logo-tse.png" alt="Tribunal Supremo Electoral" width="100px" class="mt-5">
+          <img src="img/logo-tse.png" alt="Tribunal Supremo Electoral" width="100px" class="mt-5 m-md-auto">
         </a>
       </div>
     </div>
 </div>
 
 <script>
-// When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
+  // Se executa cuando el usuario mueve el 'scroll'
+  window.onscroll = function() {setSticky()};
 
-// Get the header
-var header = document.getElementById("tab-pdd");
+  // Obtener tab-pdd
+  var header = document.getElementById("tab-pdd");
+  // Obtener posición de tab-pdd
+  var sticky = header.offsetTop - 130;
 
-// Get the offset position of the navbar
-var sticky = header.offsetTop - 130;
-var report = document.getElementById("report").offsetTop + document.getElementById("report").clientHeight;
+  // Agregar y quitar clase 'sticky' según el scroll
+  function setSticky() {
+    // Obtener posición sección de reportes
+    var report = document.getElementById("report").offsetTop - document.getElementById('tab-pdd').clientHeight;
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
+    if (window.pageYOffset > sticky) {
+      // Cuando ya llego a la posición de tab-pdd
+      header.classList.add("sticky");
+    } else {
+      // Antes de la posición de tab-pdd
+      header.classList.remove("sticky");
+    }
+
+    // Eliminar cuando llega a la posición de reportes
+    if(window.pageYOffset > report) {
+      header.classList.remove("sticky");
+    }
   }
 
-  if(window.pageYOffset > report) {
-    header.classList.remove("sticky");
-  }
-}
-
-var clickElements = document.getElementsByClassName('click-reset');
-Array.from(clickElements).toArray().forEach((element) => {
-  element.addEventListener('click', () => {
-    var elmnt = document.getElementById("reset-scroll");
-    elmnt.scrollIntoView();
+  // Agregar evento a los botones de tab-pdd
+  var clickElements = document.getElementsByClassName('click-reset');
+  Array.from(clickElements).toArray().forEach((element) => {
+    element.addEventListener('click', () => {
+      var elmnt = document.getElementById("reset-scroll");
+      elmnt.scrollIntoView();
+    });
   });
-});
-
-console.log(document.body.clientWidth);
 
 </script>
