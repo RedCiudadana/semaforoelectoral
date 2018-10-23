@@ -13,6 +13,7 @@
 </div>
 
 <div class="container-fluid">
+
     {{!-- Se parte del semáforo electoral --}}
     <div class="row bg-primary text-white">
         <div class="col-sm-6 text-center text-sm-left">
@@ -24,41 +25,47 @@
         <div class="col-sm-6 text-center">
             <a href="/#report"><button class="btn btn-warning text-white my-5 px-4">¿Cómo denunciar?</button></a>
         </div>
+        <div id="reset-scroll"></div>
     </div>
+
     {{!-- Tab-pdd --}}
-    <div class="row bg-light tab-pdd text-center">
-      <div class="col-md-4 py-2">
-        {{#link-to 'index'}}
+    <div id="tab-pdd" class="row bg-light tab-pdd text-center">
+      <div class="col-4 col-md-4 p-0 py-md-2">
+        <a href="/#reset-scroll">
           <button class="btn bg-white wrap-inherit previo">
             <img src="img/iconos/i-previo.png" alt="Previo al fin de inscripción de candidatos" height="50px">
-            <p>Previo al fin de inscripción de candidatos</p>
+            <p class="d-none d-md-block">Previo al fin de inscripción de candidatos</p>
           </button>
-        {{/link-to}}
+        </a>
       </div>
 
-      <div class="col-md-4 py-2">
-        {{#link-to 'index.durante'}}
+      <div class="col-4 col-md-4 p-0 py-md-2">
+        <a href="#/durante" class="click-reset">
           <button class="btn bg-white wrap-inherit durante">
             <img src="img/iconos/i-durante.png" alt="Durante las elecciones" height="50px">
-            <p>Durante Convocatoria</p>
+            <p class="d-none d-md-block">Durante Convocatoria</p>
           </button>
-        {{/link-to}}
+        </a>
       </div>
 
-      <div class="col-md-4 py-2">
-        {{#link-to 'index.despues'}}
+      <div class="col-4 col-md-4 p-0 py-md-2">
+        <a href="#/despues" class="click-reset">
           <button class="btn bg-white wrap-inherit despues">
             <img src="img/iconos/i-despues.png" alt="Despues de las elecciones" height="50px">
-            <p>Despues Elecciones</p>
+            <p class="d-none d-md-block">Despues Elecciones</p>
           </button>
-        {{/link-to}}
+        </a>
       </div>
     </div>
+
     {{!-- Main info --}}
+    <div class="content">
     {{outlet}}
+    </div>
+
     {{!-- Reportar --}}
     <div id="report" class="row bg-light">
-      <div class="col-12 text-center">
+      <div class="col-12 text-center py-5 mt-5 m-md-auto p-md-auto">
         <h3>¿Presenciaste alguna irregularidad?</h3>
         <p>Cualquier ciudadano puede hacer una denuncia, si detectas algo ilegal denuncia en:</p>
       </div>
@@ -86,3 +93,39 @@
       </div>
     </div>
 </div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("tab-pdd");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop - 130;
+var report = document.getElementById("report").offsetTop + document.getElementById("report").clientHeight;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+
+  if(window.pageYOffset > report) {
+    header.classList.remove("sticky");
+  }
+}
+
+var clickElements = document.getElementsByClassName('click-reset');
+Array.from(clickElements).toArray().forEach((element) => {
+  element.addEventListener('click', () => {
+    var elmnt = document.getElementById("reset-scroll");
+    elmnt.scrollIntoView();
+  });
+});
+
+console.log(document.body.clientWidth);
+
+</script>

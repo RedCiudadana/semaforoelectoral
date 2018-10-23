@@ -70,9 +70,19 @@ $border-radius: 25px;
 .tab-pdd {
     button {
         width: 90%;
-        height: 8rem;
+        height: 4rem;
     }
 }
+
+@include media-breakpoint-up(sm) {
+    .tab-pdd {
+        button {
+            height: 6rem;
+        }
+    }
+}
+
+
 
 // Font awesome
 i {
@@ -94,4 +104,34 @@ i {
     margin-right: 1rem;
     margin-bottom: 10px;
     border-radius: 25px;
+}
+
+// Reset scroll
+
+// Se mantiene arriba de la pantalla
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 100px;
+    z-index: 1000;
+    opacity: 1;
+}
+
+.sticky + .content {
+    padding-top: 200px;
+}
+
+@include media-breakpoint-up(sm) {
+    .sticky {
+        position: unset;
+        top: unset;
+        width: unset;
+        margin-top: unset;
+        z-index: unset;
+        opacity: unset;
+    }
+    .sticky + .content {
+        padding-top: 0;
+    }
 }
