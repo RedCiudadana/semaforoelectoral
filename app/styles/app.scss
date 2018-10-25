@@ -4,6 +4,7 @@ $primary: #27495b;
 $secondary: #00ac56; // Cambiar
 $warning: #ef4a50;
 $dark: #1e2b3d;
+$color: #3f526d;
 $light: #f3f3f3;
 
 $navbar-color: $dark;
@@ -13,6 +14,10 @@ $footer-color: #ffffff;
 $border-radius: 25px;
 
 @import "ember-bootstrap/bootstrap";
+
+body {
+    color: $color !important;
+}
 
 .row, #slider {
     padding: 2rem;
@@ -30,13 +35,14 @@ $border-radius: 25px;
 }
 
 #slider {
-    width: 100vw;
+    width: 100%;
     height: 160vw;
+    margin: 0;
 }
 
 @include media-breakpoint-up(sm) {
     #slider {
-        width: 100vw;
+        width: 100%;
         height: 60vw;
     }
 }

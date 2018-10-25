@@ -1,12 +1,12 @@
 {{!-- Slider --}}
 {{!-- En pantalla pequeña --}}
-<div id="slider" style="background-image: url('img/slider-se-phone.jpg'); background-size: contain;" class="d-block d-md-none text-center">
+<div id="slider" style="background-image: url('img/slider-se-phone.jpg'); background-size: cover;" class="d-block d-sm-none text-center">
   <h2 class="font-weight-bold">Semáforo electoral 2018</h2>
   <p>Campañas limpias y reglas parejas para que todos enriquecen las elecciones. No dejemos que se ensucie nuestra democracia; fiscalicemos entre todos las campañas electorales.</p>
   <button class="btn btn-secondary text-white my-2 px-4">Más información</button>
 </div>
 {{!-- En pantalla grande --}}
-<div id="slider" style="background-image: url('img/slider-se.jpg'); background-size: contain;" class="d-none d-md-block">
+<div id="slider" style="background-image: url('img/slider-se.jpg'); background-size: cover;" class="d-none d-sm-block">
   <h2 class="font-weight-bold">Semáforo electoral 2018</h2>
   <p class="w-50">Campañas limpias y reglas parejas para que todos enriquecen las elecciones. No dejemos que se ensucie nuestra democracia; fiscalicemos entre todos las campañas electorales.</p>
   <button class="btn btn-secondary text-white my-2 px-4">Más información</button>
@@ -31,9 +31,10 @@
     {{!-- Tab-pdd --}}
     <div id="tab-pdd" class="row bg-light tab-pdd text-center">
       <div class="col-4 col-md-4 p-0 py-md-2">
-        <a href="/#reset-scroll">
+        <a href="/#reset-scroll" class="click-reset">
           <button class="btn bg-white wrap-inherit previo">
-            <img src="img/iconos/i-previo.png" alt="Previo al fin de inscripción de candidatos" height="50px">
+            <img src="img/iconos/i-previo.png" alt="Previo al fin de inscripción de candidatos" height="50px" class="color">
+            <img src="img/iconos/i-previo-blanco.png" alt="Previo al fin de inscripción de candidatos" height="50px" class="white d-none">
             <p class="d-none d-md-block">Previo al fin de inscripción de candidatos</p>
           </button>
         </a>
@@ -42,7 +43,8 @@
       <div class="col-4 col-md-4 p-0 py-md-2">
         <a href="#/durante" class="click-reset">
           <button class="btn bg-white wrap-inherit durante">
-            <img src="img/iconos/i-durante.png" alt="Durante las elecciones" height="50px">
+            <img src="img/iconos/i-durante.png" alt="Durante las elecciones" height="50px" class="color">
+            <img src="img/iconos/i-durante-blanco.png" alt="Durante las elecciones" height="50px" class="white d-none">
             <p class="d-none d-md-block">Durante Convocatoria</p>
           </button>
         </a>
@@ -51,8 +53,9 @@
       <div class="col-4 col-md-4 p-0 py-md-2">
         <a href="#/despues" class="click-reset">
           <button class="btn bg-white wrap-inherit despues">
-            <img src="img/iconos/i-despues.png" alt="Despues de las elecciones" height="50px">
-            <p class="d-none d-md-block">Despues Elecciones</p>
+            <img src="img/iconos/i-despues.png" alt="Después de las elecciones" height="50px" class="color">
+            <img src="img/iconos/i-despues-blanco.png" alt="Después de las elecciones" height="50px" class="white d-none">
+            <p class="d-none d-md-block">Después Elecciones</p>
           </button>
         </a>
       </div>
@@ -66,7 +69,7 @@
     {{!-- Reportar --}}
     <div id="report" class="row bg-light">
       <div class="col-12 text-center py-5 mt-5 m-md-auto p-md-auto">
-        <h3>¿Presenciaste alguna irregularidad?</h3>
+        <h2>¿Presenciaste alguna irregularidad?</h2>
         <p>Cualquier ciudadano puede hacer una denuncia, si detectas algo ilegal denuncia en:</p>
       </div>
       <div class="col-12 text-center">
@@ -86,11 +89,14 @@
     {{!-- Ciudadano Inteligente & TSE --}}
     <div class="row bg-white">
       <div class="col-12 d-block d-md-flex text-center">
-        <a href="https://ciudadanointeligente.org/" target="_blank" class="my-auto mx-auto mx-md-0 mr-md-4 ml-md-auto">
-          <img src="img/logo-ciudadano-inteligente.png" alt="Ciudadano Inteligente" width="200px">
+        <a href="http://www.tse.org.gt/" target="_blank" class="my-auto mx-auto mx-md-0 mr-md-4 ml-md-auto">
+          <img src="img/logo-tse.png" alt="Tribunal Supremo Electoral" height="80px" class="mt-5 m-md-auto">
         </a>
-        <a href="http://www.tse.org.gt/" target="_blank" class="my-auto mx-auto mx-md-0 ml-md-4 mr-md-auto">
-          <img src="img/logo-tse.png" alt="Tribunal Supremo Electoral" width="100px" class="mt-5 m-md-auto">
+        <a href="https://ciudadanointeligente.org/" target="_blank" class="my-auto mx-auto">
+          <img src="img/logo-ciudadano-inteligente.png" alt="Ciudadano Inteligente" height="70px">
+        </a>
+        <a href="http://www.redciudadana.org/" target="_blank" rel="noopener noreferrer external author" class="my-auto mx-auto mx-md-0 ml-md-4 mr-md-auto">
+          <img class="logo" src="img/logo-red-blanco.png" alt="Red Ciudadana" title="Red Ciudadana" height="80px">
         </a>
       </div>
     </div>
