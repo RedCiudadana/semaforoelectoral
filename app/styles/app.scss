@@ -19,6 +19,22 @@ body {
     color: $color !important;
 }
 
+// NAVBAR
+
+.navbar {
+    a {
+        font-weight: bold;
+    }
+
+    .social img {
+        filter: grayscale(80);
+    }
+
+    .social img:hover {
+        filter: none;
+    }
+}
+
 .row, #slider {
     padding: 2rem;
     padding-left: 1rem;
@@ -38,6 +54,12 @@ body {
     width: 100%;
     height: 160vw;
     margin: 0;
+    padding-top: 60px;
+    padding-left: 100px;
+
+    p {
+        font-size: 24px;
+    }
 }
 
 @include media-breakpoint-up(sm) {
@@ -52,38 +74,109 @@ body {
 #footer {
     background-color: $footer-background-color;
     color: $footer-color;
+    padding-top: 40px;
     padding-bottom: 40px;
-    line-height: 26px;
+
+    a {
+        color: $footer-color;
+    }
+
+    a:hover {
+        // Calcula el color según el color de fondo. Aclara.
+        color: lighten( $footer-background-color, 30% ) !important;
+    }
+
+    i {
+        margin-right: 8px;
+    }
+
+    // Ajusta alineación con los demas iconos.
+    .fa-map-marker {
+        padding-left: 2px;
+    }
+
+    .follow {
+        h6 {
+            margin-bottom: 1.5rem;
+        }
+        
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    .image-opacity:hover {
+        opacity: 0.8;
+    }
+
+    .row {
+        padding: 0;
+    }
 }
 
-#footer img {
-    opacity: 1;
+#red-footer {
+    background-color: #e6e7e8;
+    color: #404041;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'Roboto' !important;
+
+    .logo-rc {
+        width: 120px;
+        height: 62px;
+    }
+
+    .cc-icons img {
+        margin-right: 10px;
+    }
+
+    .row {
+        padding: 0;
+    }
 }
 
-#footer .logo {
-    margin-right: 0px;
+@include media-breakpoint-up(md) {
+    #red-footer {
+        .logo-rc {
+            margin-top: 13px !important;
+        }
+    }
 }
 
-#footer a {
-    color: $footer-color;;
-}
-
-#footer i {
-    width: 14px;
-}
 
 // Tab previo, durante, despues
 .tab-pdd {
     button {
         width: 90%;
         height: 4rem;
+        -webkit-box-shadow: 6px 6px 0px 2px rgba(63,82,109,0.2);
+        -moz-box-shadow: 6px 6px 0px 2px rgba(63,82,109,0.2);
+        box-shadow: 6px 6px 0px 2px rgba(63,82,109,0.2);
+    }
+
+    img {
+        margin-bottom: 5px;
+    }
+
+    p {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .bg-secondary p {
+        color: white;
     }
 }
 
 @include media-breakpoint-up(sm) {
     .tab-pdd {
         button {
-            height: 6rem;
+            width: 220px;
+            height: 6.5rem;
+
+            img {
+                height: 40px;
+            }
         }
     }
 }
@@ -139,5 +232,23 @@ i {
     }
     .sticky + .content {
         padding-top: 0;
+    }
+}
+
+
+// Contenedor de reglas
+.row.bg-white {
+    border: 0;
+}
+
+// Colaboradores
+.colaboradores {
+    img {
+        height: 80px;
+        filter: grayscale(80);
+    }
+
+    img:hover {
+        filter: none;
     }
 }
