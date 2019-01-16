@@ -6,6 +6,7 @@ $warning: #ef4a50;
 $dark: #1e2b3d;
 $color: #3f526d;
 $light: #f3f3f3;
+$danger: #f3aa4a;
 
 $navbar-color: $dark;
 
@@ -32,6 +33,18 @@ body {
 
     .social img:hover {
         filter: none;
+    }
+
+    .red:hover a {
+        color: $warning !important;
+    }
+
+    .green:hover a {
+        color: $secondary !important;
+    }
+
+    .yellow:hover a {
+        color: $danger !important;
     }
 }
 
@@ -243,6 +256,8 @@ i {
 
 // Colaboradores
 .colaboradores {
+    padding-bottom: 100px;
+
     img {
         height: 80px;
         filter: grayscale(80);
