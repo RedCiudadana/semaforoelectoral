@@ -13,8 +13,9 @@
                         </div>
                         <div class="col-12 col-md-8">
                             {{!-- Determina de que color es el texto --}}
-                              <h6 class="{{get-color-stage stage.tag}}">{{humanize item.estado}}</h6>
+                            <h6 class="{{get-color-stage stage.tag}}">{{humanize item.estado}}</h6>
                             <p>{{item.actividad}}</p>
+                            <a href={{item.articuloURL}}><strong><span class="text-muted">Artículo: </span> {{item.articulo}}</strong></a>
                         </div>
                     </div>
                 {{/each}}
