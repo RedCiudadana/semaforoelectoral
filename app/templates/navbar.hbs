@@ -22,21 +22,24 @@ as |navbar|
 
   {{#navbar.content}}
     {{#navbar.nav justified=true type="pills" class="ml-auto" as |nav|}}
-      {{#nav.item active=false class="mx-5 red"}}
+      {{#nav.item active=false class="mx-3 red"}}
         <a href="#report">¿Cómo denunciar?</a>
       {{/nav.item}}
-      {{#nav.item active=false class="mx-5 green"}}
-        <a href="#">Periodos</a>
+      {{#nav.item active=false class="mx-3 green"}}
+        <a href="#tab-pdd">Periodos</a>
       {{/nav.item}}
-      {{#nav.item active=false class="mx-5 yellow"}}
-        {{link-to "Metodología" "application"}}
+      {{#nav.item active=false class="mx-3 yellow"}}
+        <a href="https://github.com/RedCiudadana/Recursos-Semaforo-Electoral/raw/gh-pages/LEPP.pdf">LEPP</a>
       {{/nav.item}}
-      {{#nav.item active=false class="mx-4 social"}}
+      {{#nav.item}}
+        <a href="https://raw.githubusercontent.com/RedCiudadana/Recursos-Semaforo-Electoral/gh-pages/Reportes2019.pdf">Reportes</a>
+      {{/nav.item}}
+      {{#nav.item active=false class="mx-3 ml-5 social"}}
         <a href="https://www.facebook.com/Redciudadanagt/" target="_blank">
           <img src="img/iconos/FB.png" alt="RedCiudadanaGt" height="30px" width="30px">
         </a>
       {{/nav.item}}
-      {{#nav.item active=false class="mx-4 social"}}
+      {{#nav.item active=false class="mx-3 social"}}
         <a href="https://twitter.com/RedxGuate" target="_blank">
           <img src="img/iconos/TW.png" alt="RedXGuate" height="30px" width="30px">
         </a>
