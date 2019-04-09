@@ -28,8 +28,8 @@ Router.map(function() {
   this.route('metodologia');
 
   this.route('index', { path: '/'}, function() {
-    this.route('previo', { path: '/'});
-    this.route('durante');
+    this.route('previo');
+    this.route('durante', { path: '/'});
     this.route('despues');
   });
 });
