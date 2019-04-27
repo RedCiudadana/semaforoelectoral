@@ -5,11 +5,11 @@
         <div class="col-12 col-md-3 py-4">
             <h3>{{stage.tag}}</h3>
         </div>
-        <div class="col-12 col-md-9 py-4">
+        <div class="col-12 col-md-9 py-4 list-rules">
                 {{#each stage.data as |item|}}
                     <div class="row">
                         <div class="col-12 col-md-4 text-center">
-                            <img src={{item.enlaceIcono}} alt="{{item.actividad}}" class="w-75">
+                            <img src={{item.enlaceIcono}} alt="{{item.actividad}}">
                         </div>
                         <div class="col-12 col-md-8">
                             {{!-- Determina de que color es el texto --}}
