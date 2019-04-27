@@ -52,6 +52,7 @@
     "ember-metrics": "^0.12.1",
     "ember-page-title": "^4.0.5",
     "ember-resolver": "^5.0.1",
+    "ember-router-scroll": "^1.1.0",
     "ember-social-share": "^0.3.4",
     "ember-source": "~3.4.0",
     "eslint-plugin-ember": "^5.2.0",

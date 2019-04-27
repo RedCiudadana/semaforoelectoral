@@ -22,6 +22,12 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    routerScroll: {
+      // scrollElement: '#reset-scroll',
+      targetElement: '#reset-scroll',
+      delayScrollTop: true
+    },
+
     // Ember metrics
     metricsAdapters: [
       {
